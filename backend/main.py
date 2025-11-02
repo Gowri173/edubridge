@@ -31,13 +31,22 @@ app = FastAPI(
     version="3.3.0"
 )
 
+
+origins = [
+    "http://localhost:3000",
+    "https://edubridge-git-main-gowrirams-projects.vercel.app",
+    "https://edubridge-3bocna5dv-gowrirams-projects.vercel.app",
+    "https://edubridge.vercel.app"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ======================================================
 # REGISTER WITH RESUME
