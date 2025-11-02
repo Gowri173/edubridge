@@ -33,10 +33,8 @@ app = FastAPI(
 
 
 origins = [
-    "http://localhost:3000",
-    "https://edubridge-git-main-gowrirams-projects.vercel.app",
-    "https://edubridge-3bocna5dv-gowrirams-projects.vercel.app",
-    "https://edubridge.vercel.app"
+    "https://edubridge-1-ei2r.onrender.com",  # your Vercel frontend URL
+    "http://localhost:3000",                  # optional for local testing
 ]
 
 app.add_middleware(
