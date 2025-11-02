@@ -75,7 +75,7 @@ export default function Auth({ onAuth }) {
             const formData = new FormData();
             formData.append("role", selectedRole);
 
-            await axios.post("http://127.0.0.1:8000/select_role", formData, {
+            await axios.post("https://edubridge-lczi.onrender.com/select_role", formData, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
