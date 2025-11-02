@@ -1,13 +1,10 @@
 import axios from "axios";
 
-const API = axios.create({
-    baseURL: "https://edubridge-lczi.onrender.com",
+const api = axios.create({
+    baseURL: "https://edubridge-backend.onrender.com",  // ✅ Replace with your actual Render backend URL
+    headers: {
+        "Content-Type": "application/json",
+    },
 });
 
-API.interceptors.request.use((req) => {
-    const token = localStorage.getItem("token");
-    if (token) req.headers.Authorization = `Bearer ${token}`;
-    return req;
-});
-
-export default API;
+export default api;
