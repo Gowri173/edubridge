@@ -37,7 +37,7 @@ export default function Auth({ onAuth }) {
             if (tab === 0) formData.append("name", form.name);
             if (tab === 0 && form.resumeFile) formData.append("file", form.resumeFile);
 
-            const res = await axios.post(`http://127.0.0.1:8000/${endpoint}`, formData, {
+            const res = await axios.post(`https://edubridge-lczi.onrender.com/${endpoint}`, formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
 
